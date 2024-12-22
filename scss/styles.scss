@@ -1,0 +1,291 @@
+$background-color: #18171F;
+$box-background-color: #24232C;
+$strong-text-color: #E6E5EA;
+$weak-text-color: #817D92;
+$neon-green: #A4FFAF;
+$large-font-size: 32px;
+$medium-font-size: 24px;
+$small-font-size: 18px;
+$mobile-small-font-size: 16px;
+$weak-warning: #F64A4A;
+$too-weak-warning-color: #F64A4A;
+$weak-warning-color: #FB7C58;
+$medium-warning-color: #F8CD65;
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    color: $strong-text-color;
+}
+
+body {
+    height: 100vh;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 31px;
+
+    #title {
+
+        color: $weak-text-color;
+        font-size: $medium-font-size;
+
+        @media (max-width:570px) {
+            font-size: $mobile-small-font-size;
+        }
+    }
+}
+
+
+.main {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    width: 540px;
+
+    @media (max-width:570px) {
+        max-width: 343px;
+
+    }
+
+
+    .output-container {
+        background-color: $box-background-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 32px;
+        height: 80px;
+
+        @media (max-width:570px) {
+            padding: 16px;
+            height: 64px;
+
+        }
+
+
+
+
+        p {
+            font-size: $large-font-size;
+            color: $weak-text-color;
+
+            @media (max-width:570px) {
+                font-size: $medium-font-size;
+
+            }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            p {
+                color: $neon-green;
+                font-size: $small-font-size;
+
+                @media (max-width:570px) {
+                    font-size: $mobile-small-font-size;
+
+                }
+            }
+
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .input-container {
+        background-color: $box-background-color;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @media (max-width:570px) {
+            padding: 16px;
+        }
+
+        .character-length-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                &:first-child {
+                    @media (max-width:570px) {
+                        font-size: $mobile-small-font-size;
+
+                    }
+
+                    font-size: $small-font-size;
+                }
+
+                &:nth-child(2) {
+                    @media (max-width:570px) {
+                        font-size: $medium-font-size;
+
+                    }
+
+                    font-size: $large-font-size;
+                    color: $neon-green;
+                }
+            }
+        }
+
+        input[type="range"] {
+            appearance: none;
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+            -webkit-appearance: none;
+            background-color: $background-color;
+
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+
+            height: 8px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            border: 2px solid $neon-green;
+            background-color: $background-color;
+
+        }
+
+
+
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            -webkit-appearance: none;
+
+            height: 28px;
+            width: 28px;
+            border-radius: 100%;
+            background-color: $strong-text-color;
+            margin-top: -10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+
+        }
+
+        .password-settings-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            div {
+                display: flex;
+                gap: 24px;
+                align-items: center;
+
+                p {
+                    @media (max-width:570px) {
+                        font-size: $mobile-small-font-size;
+
+                    }
+
+                    font-size: $small-font-size;
+                }
+
+                i {
+                    color: $neon-green;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        .output-description {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            background-color: $background-color;
+            padding: 0 16px;
+
+            p {
+                color: $weak-text-color;
+
+                @media (max-width:570px) {
+                    font-size: $mobile-small-font-size;
+
+                }
+            }
+
+            .strength-status {
+                display: flex;
+                align-items: center;
+                gap: 15.5px;
+
+                p {
+                    color: $strong-text-color;
+                    font-size: $medium-font-size;
+
+                    @media (max-width:570px) {
+                        font-size: $small-font-size;
+
+                    }
+                }
+
+                .bars-status {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    div {
+                        height: 28px;
+                        width: 10px;
+                        border: 2px solid $strong-text-color;
+                    }
+                }
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 65px;
+            gap: 24px;
+            background-color: $neon-green;
+            cursor: pointer;
+            border: none;
+            color: $box-background-color;
+            font-size: $small-font-size;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+            &:hover {
+                background-color: transparent;
+                border: 2px solid $neon-green;
+                color: $neon-green;
+
+                i {
+                    color: $neon-green;
+                }
+            }
+
+            i {
+                color: $box-background-color;
+
+            }
+
+        }
+
+    }
+
+}
+
+.hide {
+    display: none;
+}

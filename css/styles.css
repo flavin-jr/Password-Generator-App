@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  color: #E6E5EA;
+}
+
+body {
+  height: 100vh;
+  background-color: #18171F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 31px;
+}
+body #title {
+  color: #817D92;
+  font-size: 24px;
+}
+@media (max-width: 570px) {
+  body #title {
+    font-size: 16px;
+  }
+}
+
+.main {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  width: 540px;
+}
+@media (max-width: 570px) {
+  .main {
+    max-width: 343px;
+  }
+}
+.main .output-container {
+  background-color: #24232C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px;
+  height: 80px;
+}
+@media (max-width: 570px) {
+  .main .output-container {
+    padding: 16px;
+    height: 64px;
+  }
+}
+.main .output-container p {
+  font-size: 32px;
+  color: #817D92;
+}
+@media (max-width: 570px) {
+  .main .output-container p {
+    font-size: 24px;
+  }
+}
+.main .output-container div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.main .output-container div p {
+  color: #A4FFAF;
+  font-size: 18px;
+}
+@media (max-width: 570px) {
+  .main .output-container div p {
+    font-size: 16px;
+  }
+}
+.main .output-container div img {
+  cursor: pointer;
+}
+.main .input-container {
+  background-color: #24232C;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 570px) {
+  .main .input-container {
+    padding: 16px;
+  }
+}
+.main .input-container .character-length-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .input-container .character-length-container p:first-child {
+  font-size: 18px;
+}
+@media (max-width: 570px) {
+  .main .input-container .character-length-container p:first-child {
+    font-size: 16px;
+  }
+}
+.main .input-container .character-length-container p:nth-child(2) {
+  font-size: 32px;
+  color: #A4FFAF;
+}
+@media (max-width: 570px) {
+  .main .input-container .character-length-container p:nth-child(2) {
+    font-size: 24px;
+  }
+}
+.main .input-container input[type=range] {
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+  background-color: #18171F;
+}
+.main .input-container input[type=range]::-webkit-slider-runnable-track {
+  height: 8px;
+}
+.main .input-container input[type=range]::-webkit-slider-thumb:hover {
+  border: 2px solid #A4FFAF;
+  background-color: #18171F;
+}
+.main .input-container input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 28px;
+  width: 28px;
+  border-radius: 100%;
+  background-color: #E6E5EA;
+  margin-top: -10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.main .input-container .password-settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main .input-container .password-settings-container div {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.main .input-container .password-settings-container div p {
+  font-size: 18px;
+}
+@media (max-width: 570px) {
+  .main .input-container .password-settings-container div p {
+    font-size: 16px;
+  }
+}
+.main .input-container .password-settings-container div i {
+  color: #A4FFAF;
+  cursor: pointer;
+}
+.main .input-container .output-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  background-color: #18171F;
+  padding: 0 16px;
+}
+.main .input-container .output-description p {
+  color: #817D92;
+}
+@media (max-width: 570px) {
+  .main .input-container .output-description p {
+    font-size: 16px;
+  }
+}
+.main .input-container .output-description .strength-status {
+  display: flex;
+  align-items: center;
+  gap: 15.5px;
+}
+.main .input-container .output-description .strength-status p {
+  color: #E6E5EA;
+  font-size: 24px;
+}
+@media (max-width: 570px) {
+  .main .input-container .output-description .strength-status p {
+    font-size: 18px;
+  }
+}
+.main .input-container .output-description .strength-status .bars-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.main .input-container .output-description .strength-status .bars-status div {
+  height: 28px;
+  width: 10px;
+  border: 2px solid #E6E5EA;
+}
+.main .input-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  gap: 24px;
+  background-color: #A4FFAF;
+  cursor: pointer;
+  border: none;
+  color: #24232C;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.main .input-container button:hover {
+  background-color: transparent;
+  border: 2px solid #A4FFAF;
+  color: #A4FFAF;
+}
+.main .input-container button:hover i {
+  color: #A4FFAF;
+}
+.main .input-container button i {
+  color: #24232C;
+}
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

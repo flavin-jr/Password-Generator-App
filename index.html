@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Password generator app</title>
+</head>
+
+<body>
+  <p id="title">Password Generator</p>
+  <div class="main">
+    <div class="output-container">
+      <p id="password">P4$5W0rD!</p>
+      <div>
+        <p class="hide" id="copied">COPIED</p>
+        <img src="/assets/copy.svg" alt="copy image">
+      </div>
+    </div>
+    <div class="input-container">
+      <div class="character-length-container">
+        <p>Character Length</p>
+        <p>0</p>
+      </div>
+      <input type="range" name="length" id="length" min="0" max="20" value="0">
+      <div class="password-settings-container">
+
+        <div class="upper">
+          <i class="fa-regular fa-square fa-xl"></i>
+          <p>Include Uppercase Letters</p>
+
+        </div>
+        <div class="lower">
+          <i class="fa-regular fa-square fa-xl"></i>
+          <p>Include Lowercase Letters</p>
+
+        </div>
+        <div class="numbers">
+          <i class="fa-regular fa-square fa-xl"></i>
+          <p>Include Numbers</p>
+
+        </div>
+        <div class="symbols">
+          <i class="fa-regular fa-square fa-xl"></i>
+          <p>Include Symbols</p>
+
+        </div>
+
+
+      </div>
+      <div class="output-description">
+        <p>STRENGTH</p>
+        <div class="strength-status">
+          <p></p>
+          <div class="bars-status">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <button id="main-btn">GENERATE<i class="fa-solid fa-arrow-right fa-xs"></i></button>
+    </div>
+  </div>
+  <script src="index.js"></script>
+  <script src="https://kit.fontawesome.com/9401a387c0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
